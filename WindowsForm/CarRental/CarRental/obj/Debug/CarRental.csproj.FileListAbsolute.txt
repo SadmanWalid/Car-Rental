@@ -8,3 +8,18 @@ D:\user\Coding\Codes\Udemy\CSharp\Windows Form\CR3\CarRental\CarRental\obj\Debug
 D:\user\Coding\Codes\Udemy\CSharp\Windows Form\CR3\CarRental\CarRental\obj\Debug\CarRental.csproj.CoreCompileInputs.cache
 D:\user\Coding\Codes\Udemy\CSharp\Windows Form\CR3\CarRental\CarRental\obj\Debug\CarRental.exe
 D:\user\Coding\Codes\Udemy\CSharp\Windows Form\CR3\CarRental\CarRental\obj\Debug\CarRental.pdb
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\bin\Debug\CarRental.exe.config
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\bin\Debug\CarRental.exe
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\bin\Debug\CarRental.pdb
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\bin\Debug\EntityFramework.dll
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\bin\Debug\EntityFramework.SqlServer.dll
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\bin\Debug\EntityFramework.xml
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\bin\Debug\EntityFramework.SqlServer.xml
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.csprojAssemblyReference.cache
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.Form1.resources
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.Properties.Resources.resources
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.csproj.GenerateResource.cache
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.csproj.CoreCompileInputs.cache
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.csproj.CopyComplete
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.exe
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.pdb

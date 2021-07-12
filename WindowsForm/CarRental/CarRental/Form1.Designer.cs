@@ -143,14 +143,9 @@ namespace CarRental
             // 
             // cbTypeOfCar
             // 
+            this.cbTypeOfCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTypeOfCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTypeOfCar.FormattingEnabled = true;
-            this.cbTypeOfCar.Items.AddRange(new object[] {
-            "Audi",
-            "Honda",
-            "Jeep",
-            "Mercedes",
-            "Toyota"});
             this.cbTypeOfCar.Location = new System.Drawing.Point(42, 354);
             this.cbTypeOfCar.Name = "cbTypeOfCar";
             this.cbTypeOfCar.Size = new System.Drawing.Size(330, 30);
@@ -189,6 +184,7 @@ namespace CarRental
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Car Rental";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

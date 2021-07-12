@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarRentalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarRentalDetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="dateRented" Type="date" />
+    <Property Name="dateReturned" Type="date" />
+    <Property Name="carType" Type="int" />
+  </EntityType>
+  <EntityType Name="TypesOfCar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="carTypes" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_CarRentalDetails_TypesOfCar">
+    <End Role="TypesOfCar" Type="Self.TypesOfCar" Multiplicity="0..1" />
+    <End Role="CarRentalDetails" Type="Self.CarRentalDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesOfCar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CarRentalDetails">
+        <PropertyRef Name="carType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CarRentalModelStoreContainer">
+    <EntitySet Name="CarRentalDetails" EntityType="Self.CarRentalDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypesOfCar" EntityType="Self.TypesOfCar" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CarRentalDetails_TypesOfCar" Association="Self.FK_CarRentalDetails_TypesOfCar">
+      <End Role="TypesOfCar" EntitySet="TypesOfCar" />
+      <End Role="CarRentalDetails" EntitySet="CarRentalDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
