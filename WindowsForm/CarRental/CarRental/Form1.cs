@@ -12,31 +12,26 @@ namespace CarRental
 {
     public partial class Form1 : Form
     {
-        private readonly CarRentalEntities CarRentalObject;
+        private readonly CarRentalEntities carRentalObject;
         public Form1()
         {
             InitializeComponent();
-            CarRentalObject = new CarRentalEntities();
+            carRentalObject = new CarRentalEntities();
         }
 
         private void btSubmit_Click(object sender, EventArgs e)
         {
+            //form validation
             try
             {
-
-
-
-
-
-
-                String name = tbCustomerName.Text;
+                String customerName = tbCustomerName.Text;
                 DateTime dateOfRenting =dateRent.Value;
                 DateTime dateOfReturn = dateReturn.Value;
                 var carType = cbTypeOfCar.Text;
                 bool isValid = true;
                 StringBuilder errorMessage = new StringBuilder();
                 //Customer name validation
-                if (string.IsNullOrWhiteSpace(name))
+                if (string.IsNullOrWhiteSpace(customerName))
                 {
                     errorMessage.AppendLine("Enter a valid name!");
                     isValid = false;
@@ -61,7 +56,18 @@ namespace CarRental
 
                 if (isValid)
                 {
-                    MessageBox.Show($"Customer Name: {name}\n\rCar Type: {carType}\n\r" +
+                    var carRentalDetailsObject = new CarRentalDetail();
+                    carRentalDetailsObject.customerName = customerName;
+                    carRentalDetailsObject.dateRented = dateOfRenting;
+                    carRentalDetailsObject.dateReturned = dateOfReturn;
+                    carRentalDetailsObject.cost = decimal.Parse(tbCost.Text);
+                    carRentalDetailsObject.carType = (int)cbTypeOfCar.SelectedValue;
+
+                    carRentalObject.CarRentalDetails.Add(carRentalDetailsObject);
+                    carRentalObject.SaveChanges();
+                    
+
+                    MessageBox.Show($"Customer Name: {customerName}\n\rCar Type: {carType}\n\r" +
                     $"Date of Renting: {dateOfRenting}\n\r" +
                     $"Date of Return: {dateOfReturn}\n\r" +
                     $"Cost:${tbCost.Text}\n\r" +
@@ -82,7 +88,7 @@ namespace CarRental
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var Cars = CarRentalObject.TypesOfCars.ToList();
+            var Cars = carRentalObject.TypesOfCars.ToList();
             cbTypeOfCar.DataSource = Cars;
             cbTypeOfCar.ValueMember = "id";
             cbTypeOfCar.DisplayMember = "carTypes";

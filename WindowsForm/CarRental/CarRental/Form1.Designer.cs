@@ -183,6 +183,7 @@ namespace CarRental
             this.Controls.Add(this.lbTitle);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Rental";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
