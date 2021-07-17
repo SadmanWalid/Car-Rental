@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CarRental
 {
-    public partial class Form1 : Form
+    public partial class AddRentalInfo : Form
     {
         private readonly CarRentalEntities carRentalObject;
-        public Form1()
+        public AddRentalInfo()
         {
             InitializeComponent();
             carRentalObject = new CarRentalEntities();
