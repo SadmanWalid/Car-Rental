@@ -86,12 +86,14 @@ namespace CarRental
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void AddRentalInfo_Load(object sender, EventArgs e)
         {
             var Cars = carRentalObject.TypesOfCars.ToList();
             cbTypeOfCar.DataSource = Cars;
             cbTypeOfCar.ValueMember = "id";
             cbTypeOfCar.DisplayMember = "carTypes";
         }
+
+       
     }
 }
