@@ -16,7 +16,11 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="carTypes" Type="nvarchar" MaxLength="50" />
+    <Property Name="brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="model" Type="nvarchar" MaxLength="50" />
+    <Property Name="vin" Type="nvarchar" MaxLength="50" />
+    <Property Name="licensePlate" Type="nvarchar" MaxLength="50" />
+    <Property Name="year" Type="int" />
   </EntityType>
   <Association Name="FK_CarRentalDetails_TypesOfCar">
     <End Role="TypesOfCar" Type="Self.TypesOfCar" Multiplicity="0..1" />

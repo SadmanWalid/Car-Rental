@@ -48,7 +48,7 @@ namespace CarRental
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1154, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1189, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,27 +72,27 @@ namespace CarRental
             // AddRentalRecordToolStripMenuItem
             // 
             this.AddRentalRecordToolStripMenuItem.Name = "AddRentalRecordToolStripMenuItem";
-            this.AddRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.AddRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.AddRentalRecordToolStripMenuItem.Text = "Add Rental Record";
             this.AddRentalRecordToolStripMenuItem.Click += new System.EventHandler(this.AddRentalRecordToolStripMenuItem_Click);
             // 
             // viewArchiveToolStripMenuItem
             // 
             this.viewArchiveToolStripMenuItem.Name = "viewArchiveToolStripMenuItem";
-            this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.viewArchiveToolStripMenuItem.Text = "View Archive";
             // 
             // editRentalRecordToolStripMenuItem
             // 
             this.editRentalRecordToolStripMenuItem.Name = "editRentalRecordToolStripMenuItem";
-            this.editRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.editRentalRecordToolStripMenuItem.Text = "Edit Rental Record";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 577);
+            this.ClientSize = new System.Drawing.Size(1189, 611);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

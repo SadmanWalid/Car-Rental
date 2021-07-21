@@ -12,10 +12,10 @@ namespace CarRental
 {
     public partial class MainWindow : Form
     {
-        private int open;
+       
         public MainWindow()
         {
-            open = 0;
+            
             InitializeComponent();
         }
 

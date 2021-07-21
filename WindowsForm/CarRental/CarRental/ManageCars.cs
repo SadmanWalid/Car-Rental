@@ -21,9 +21,16 @@ namespace CarRental
 
         private void ManageCars_Load(object sender, EventArgs e)
         {
-            var cars = carRentalEntitiesObj.TypesOfCars.Select(x => new { ID = x.id, Name = x.carTypes }).ToList();
+            var cars = carRentalEntitiesObj.TypesOfCars.Select(x => new 
+                { carName = x.brand, modelName =x.model,
+                vin =x.vin, licensePlate = x.licensePlate,
+                year= x.year}).ToList();
             gvManageCars.DataSource = cars;
-
+            gvManageCars.Columns[0].HeaderText = "Brand";
+            gvManageCars.Columns[1].HeaderText = "Model";
+            gvManageCars.Columns[2].HeaderText = "VIN";
+            gvManageCars.Columns[3].HeaderText = "License Plate";
+            gvManageCars.Columns[4].HeaderText = "Year";
         }
     }
 }

@@ -29,6 +29,8 @@ namespace CarRental
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvManageCars = new System.Windows.Forms.DataGridView();
             this.btAddNewCar = new System.Windows.Forms.Button();
             this.btEditCar = new System.Windows.Forms.Button();
@@ -38,19 +40,36 @@ namespace CarRental
             // 
             // gvManageCars
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvManageCars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvManageCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvManageCars.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvManageCars.Location = new System.Drawing.Point(21, 43);
             this.gvManageCars.Name = "gvManageCars";
+            this.gvManageCars.RowHeadersVisible = false;
             this.gvManageCars.RowHeadersWidth = 62;
             this.gvManageCars.RowTemplate.Height = 28;
-            this.gvManageCars.Size = new System.Drawing.Size(397, 363);
+            this.gvManageCars.Size = new System.Drawing.Size(752, 363);
             this.gvManageCars.TabIndex = 0;
             // 
             // btAddNewCar
             // 
             this.btAddNewCar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btAddNewCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddNewCar.Location = new System.Drawing.Point(528, 72);
+            this.btAddNewCar.Location = new System.Drawing.Point(109, 425);
             this.btAddNewCar.Name = "btAddNewCar";
             this.btAddNewCar.Size = new System.Drawing.Size(121, 69);
             this.btAddNewCar.TabIndex = 12;
@@ -61,9 +80,9 @@ namespace CarRental
             // 
             this.btEditCar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btEditCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEditCar.Location = new System.Drawing.Point(528, 194);
+            this.btEditCar.Location = new System.Drawing.Point(337, 427);
             this.btEditCar.Name = "btEditCar";
-            this.btEditCar.Size = new System.Drawing.Size(130, 57);
+            this.btEditCar.Size = new System.Drawing.Size(130, 64);
             this.btEditCar.TabIndex = 13;
             this.btEditCar.Text = "Edit Car";
             this.btEditCar.UseVisualStyleBackColor = false;
@@ -72,7 +91,7 @@ namespace CarRental
             // 
             this.btDeleteCar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btDeleteCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDeleteCar.Location = new System.Drawing.Point(528, 309);
+            this.btDeleteCar.Location = new System.Drawing.Point(570, 432);
             this.btDeleteCar.Name = "btDeleteCar";
             this.btDeleteCar.Size = new System.Drawing.Size(130, 62);
             this.btDeleteCar.TabIndex = 14;
@@ -83,7 +102,7 @@ namespace CarRental
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 505);
             this.Controls.Add(this.btDeleteCar);
             this.Controls.Add(this.btEditCar);
             this.Controls.Add(this.btAddNewCar);
