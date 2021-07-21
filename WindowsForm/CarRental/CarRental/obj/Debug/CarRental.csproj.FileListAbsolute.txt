@@ -25,3 +25,4 @@ D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRent
 D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.AddRentalInfo.resources
 D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.MainWindow.resources
 D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.ManageCars.resources
+D:\user\Coding\Codes\Udemy\Local repo for udemy\UdemyCourses\WindowsForm\CarRental\CarRental\obj\Debug\CarRental.AddEditCar.resources

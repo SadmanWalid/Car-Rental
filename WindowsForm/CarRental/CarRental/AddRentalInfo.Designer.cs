@@ -49,9 +49,9 @@ namespace CarRental
             this.lbTitle.Font = new System.Drawing.Font("AR JULIAN", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.Location = new System.Drawing.Point(158, 9);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(477, 58);
+            this.lbTitle.Size = new System.Drawing.Size(420, 58);
             this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "Car Rental System";
+            this.lbTitle.Text = "Add Rental Info";
             // 
             // lbCustomerName
             // 
