@@ -1,7 +1,7 @@
 ﻿
 namespace CarRental
 {
-    partial class Form1
+    partial class AddRentalInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -164,7 +164,7 @@ namespace CarRental
             this.btSubmit.UseVisualStyleBackColor = false;
             this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
             // 
-            // Form1
+            // AddRentalInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,10 +182,10 @@ namespace CarRental
             this.Controls.Add(this.lbCustomerName);
             this.Controls.Add(this.lbTitle);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form1";
+            this.Name = "AddRentalInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Rental";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.AddRentalInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

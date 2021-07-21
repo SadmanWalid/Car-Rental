@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CarRental
 {
-    public partial class Form1 : Form
+    public partial class AddRentalInfo : Form
     {
         private readonly CarRentalEntities carRentalObject;
-        public Form1()
+        public AddRentalInfo()
         {
             InitializeComponent();
             carRentalObject = new CarRentalEntities();
@@ -86,12 +86,14 @@ namespace CarRental
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void AddRentalInfo_Load(object sender, EventArgs e)
         {
-            var Cars = carRentalObject.TypesOfCars.ToList();
+            var Cars = carRentalObject.TypesOfCars.Select(x => new { carID=x.id, car = x.brand + " " + x.model }).ToList();
             cbTypeOfCar.DataSource = Cars;
-            cbTypeOfCar.ValueMember = "id";
-            cbTypeOfCar.DisplayMember = "carTypes";
+            cbTypeOfCar.ValueMember = "carId";
+            cbTypeOfCar.DisplayMember = "car";
         }
+
+       
     }
 }
