@@ -65,14 +65,37 @@ namespace CarRental
             var selectedRowIndex = gvManageCars.SelectedCells[0].RowIndex;
             var ID = (int)gvManageCars.Rows[selectedRowIndex].Cells["carID"].Value;
             
-            var editCar = carRentalEntitiesObj.TypesOfCars.FirstOrDefault(x => x.id == ID );
-            var addEditCar = new AddEditCar(editCar,this);
+            //var editCar = carRentalEntitiesObj.TypesOfCars.FirstOrDefault(x => x.id == ID );
+            var addEditCar = new AddEditCar(ID,this);
             addEditCar.MdiParent = this.MdiParent;
             addEditCar.Show();
            
 
         }
 
-      
+        private void BtDeleteCar_Click(object sender, EventArgs e)
+        {
+            var rowIndex = gvManageCars.SelectedCells[0].RowIndex;
+            var carID = (int)gvManageCars.Rows[rowIndex].Cells["carID"].Value;
+
+            var Car = carRentalEntitiesObj.TypesOfCars.FirstOrDefault(x => x.id == carID);
+            try
+            {
+                carRentalEntitiesObj.TypesOfCars.Remove(Car);
+                carRentalEntitiesObj.SaveChanges();
+                RefreshGridView();
+                MessageBox.Show("Car Deleted Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error\n"+ex.Message);
+                
+            }
+               
+
+            
+          
+            
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace CarRental
 
         private readonly CarRentalEntities carRentalEntityobj= new CarRentalEntities();
         private bool isEditMode;
-        private  int editCarID;
+        private readonly int editCarID;
         public AddEditCar(ManageCars manageCar)
         {
             manageCarObj = manageCar; // to call RefreshGridView method of ManageCars form, when AddEdit form is closed
@@ -27,20 +27,21 @@ namespace CarRental
             isEditMode = false;
         }
 
-        public AddEditCar(TypesOfCar editCar, ManageCars manageCar)
+        public AddEditCar(int ID, ManageCars manageCar)
         {
             manageCarObj = manageCar; // to call RefreshGridView method of ManageCars form, when AddEdit form is closed
-            editCarID = editCar.id;
+            editCarID = ID;
             InitializeComponent();
             this.Text = "Edit Car";
             lbTitle.Text = "Edit Car";
             lbTitle.Visible = true;
-            PopulateTextFields(editCar);
+            PopulateTextFields(editCarID);
             isEditMode = true;
         }
 
-        private void PopulateTextFields(TypesOfCar editCar)
-        {   
+        private void PopulateTextFields(int id)
+        {
+            var editCar = carRentalEntityobj.TypesOfCars.FirstOrDefault(x => x.id == id);
             tbBrand.Text = editCar.brand;
             tbModel.Text = editCar.model;
             tbVIN.Text = editCar.vin;
@@ -116,11 +117,8 @@ namespace CarRental
                         car.year = year;
                         carRentalEntityobj.SaveChanges();
                         manageCarObj.RefreshGridView();
-                        MessageBox.Show("Edited Successfully");
-                        
-                       
-                       
-
+                        MessageBox.Show("Changes Saved Successfully");
+                        btCancel.Text = "Close";
 
 
                     }
@@ -128,6 +126,18 @@ namespace CarRental
                     {
                         //add code
 
+                        var newCar = new TypesOfCar();
+                        newCar.brand = tbBrand.Text;
+                        newCar.model = tbModel.Text;
+                        newCar.vin = tbVIN.Text;
+                        newCar.licensePlate = tbLicenseNumber.Text;
+                        newCar.year = int.Parse(tbYear.Text);
+
+                        carRentalEntityobj.TypesOfCars.Add(newCar);
+                        carRentalEntityobj.SaveChanges();
+                        manageCarObj.RefreshGridView();
+                        btCancel.Text = "Close";
+                        MessageBox.Show("Car Added Successfully");
 
                     }
 
