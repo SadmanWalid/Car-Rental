@@ -79,23 +79,46 @@ namespace CarRental
             var carID = (int)gvManageCars.Rows[rowIndex].Cells["carID"].Value;
 
             var Car = carRentalEntitiesObj.TypesOfCars.FirstOrDefault(x => x.id == carID);
-            try
+            var isInRentalRecord = carRentalEntitiesObj.CarRentalDetails.Any(x => x.carType == carID);
+      
+            if(isInRentalRecord)
             {
+                try
+                {
+                    carRentalEntitiesObj.TypesOfCars.Remove(Car);
+                    carRentalEntitiesObj.SaveChanges();
+                    RefreshGridView();
+                    MessageBox.Show("Car Deleted Successfully");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error!!!\nThis Item Cannot Be Deleted");
+                    RefreshGridView();
+
+                }
+            }
+            else
+            {
+                //to do change table design in MSSQL
                 carRentalEntitiesObj.TypesOfCars.Remove(Car);
                 carRentalEntitiesObj.SaveChanges();
                 RefreshGridView();
                 MessageBox.Show("Car Deleted Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error\n"+ex.Message);
-                
-            }
-               
 
-            
-          
-            
+            }
+
+
+
+
+
+
+
+
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
