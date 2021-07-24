@@ -7,6 +7,7 @@
       <End Role="TypesOfCar" EntitySet="TypesOfCars" />
       <End Role="CarRentalDetail" EntitySet="CarRentalDetails" />
     </AssociationSet>
+    <EntitySet Name="Users" EntityType="CarRentalModel.User" />
   </EntityContainer>
   <EntityType Name="CarRentalDetail">
     <Key>
@@ -44,4 +45,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

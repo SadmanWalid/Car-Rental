@@ -12,34 +12,67 @@ namespace CarRental
 {
     public partial class MainWindow : Form
     {
+        private readonly Login loginObj;
        
-        public MainWindow()
+        public MainWindow(Login objFromLoginForm)
         {
-            
+            loginObj = objFromLoginForm;
             InitializeComponent();
         }
 
         private void AddRentalRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            
-          
-                var addRentalInfo = new AddRentalInfo();
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
+
+            var Isopen = openForms.Any<Form>(x => x.Name == "AddEditRentalInfo");
+
+
+            if (!Isopen)
+            {
+                var addRentalInfo = new AddEditRentalInfo();
                 addRentalInfo.MdiParent = this;
                 addRentalInfo.Show();
-                
-         
 
-            
-            
-          
+            }
+
         }
 
         private void manageVehicleListingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var manageCar = new ManageCars();
-            manageCar.MdiParent = this;
-            manageCar.Show();
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
+
+            var Isopen = openForms.Any<Form>(x => x.Name == "ManageCars");
+
+
+            if (!Isopen)
+            {
+                var manageCar = new ManageCars();
+                manageCar.MdiParent = this;
+                manageCar.Show();
+            }
+            
+        }
+
+        private void viewArchiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
+
+            var Isopen = openForms.Any<Form>(x => x.Name == "ManageRentalRecords");
+
+
+            if (!Isopen)
+            {
+                var viewArchive = new ManageRentalRecords();
+                viewArchive.MdiParent = this;
+                viewArchive.Show();
+            }
+            
+
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            loginObj.Close();
         }
     }
 }

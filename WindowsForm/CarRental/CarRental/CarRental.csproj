@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditCar.Designer.cs">
+      <DependentUpon>AddEditCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarRentaldb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,11 +79,17 @@
     <Compile Include="CarRentalDetail.cs">
       <DependentUpon>CarRentaldb.tt</DependentUpon>
     </Compile>
-    <Compile Include="AddRentalInfo.cs">
+    <Compile Include="AddEditRentalInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddRentalInfo.Designer.cs">
-      <DependentUpon>AddRentalInfo.cs</DependentUpon>
+    <Compile Include="AddEditRentalInfo.Designer.cs">
+      <DependentUpon>AddEditRentalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -91,19 +103,37 @@
     <Compile Include="ManageCars.Designer.cs">
       <DependentUpon>ManageCars.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageRentalRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRentalRecords.Designer.cs">
+      <DependentUpon>ManageRentalRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypesOfCar.cs">
       <DependentUpon>CarRentaldb.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddRentalInfo.resx">
-      <DependentUpon>AddRentalInfo.cs</DependentUpon>
+    <Compile Include="User.cs">
+      <DependentUpon>CarRentaldb.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEditCar.resx">
+      <DependentUpon>AddEditCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditRentalInfo.resx">
+      <DependentUpon>AddEditRentalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageCars.resx">
       <DependentUpon>ManageCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageRentalRecords.resx">
+      <DependentUpon>ManageRentalRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
