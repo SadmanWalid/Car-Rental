@@ -22,6 +22,14 @@
     <Property Name="licensePlate" Type="nvarchar" MaxLength="50" />
     <Property Name="year" Type="int" />
   </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
   <Association Name="FK_CarRentalDetails_TypesOfCar">
     <End Role="TypesOfCar" Type="Self.TypesOfCar" Multiplicity="0..1" />
     <End Role="CarRentalDetails" Type="Self.CarRentalDetails" Multiplicity="*" />
@@ -37,6 +45,7 @@
   <EntityContainer Name="CarRentalModelStoreContainer">
     <EntitySet Name="CarRentalDetails" EntityType="Self.CarRentalDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypesOfCar" EntityType="Self.TypesOfCar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_CarRentalDetails_TypesOfCar" Association="Self.FK_CarRentalDetails_TypesOfCar">
       <End Role="TypesOfCar" EntitySet="TypesOfCar" />
       <End Role="CarRentalDetails" EntitySet="CarRentalDetails" />

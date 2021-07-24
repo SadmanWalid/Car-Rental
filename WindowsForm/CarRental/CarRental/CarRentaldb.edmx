@@ -27,6 +27,14 @@
           <Property Name="licensePlate" Type="nvarchar" MaxLength="50" />
           <Property Name="year" Type="int" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
         <Association Name="FK_CarRentalDetails_TypesOfCar">
           <End Role="TypesOfCar" Type="Self.TypesOfCar" Multiplicity="0..1" />
           <End Role="CarRentalDetails" Type="Self.CarRentalDetails" Multiplicity="*" />
@@ -42,6 +50,7 @@
         <EntityContainer Name="CarRentalModelStoreContainer">
           <EntitySet Name="CarRentalDetails" EntityType="Self.CarRentalDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypesOfCar" EntityType="Self.TypesOfCar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_CarRentalDetails_TypesOfCar" Association="Self.FK_CarRentalDetails_TypesOfCar">
             <End Role="TypesOfCar" EntitySet="TypesOfCar" />
             <End Role="CarRentalDetails" EntitySet="CarRentalDetails" />
@@ -58,6 +67,7 @@
             <End Role="TypesOfCar" EntitySet="TypesOfCars" />
             <End Role="CarRentalDetail" EntitySet="CarRentalDetails" />
           </AssociationSet>
+          <EntitySet Name="Users" EntityType="CarRentalModel.User" />
         </EntityContainer>
         <EntityType Name="CarRentalDetail">
           <Key>
@@ -95,6 +105,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -121,6 +139,15 @@
                 <ScalarProperty Name="vin" ColumnName="vin" />
                 <ScalarProperty Name="model" ColumnName="model" />
                 <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="CarRentalModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
