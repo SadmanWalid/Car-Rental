@@ -77,11 +77,18 @@ namespace CarRental
             var rowIndex = gvManageRentalRecords.SelectedCells[0].RowIndex;
             var recordID = (int)gvManageRentalRecords.Rows[rowIndex].Cells["ID"].Value;
 
-            var record = carRentalEntitiesObj.CarRentalDetails.FirstOrDefault(x => x.id == recordID);
-            carRentalEntitiesObj.CarRentalDetails.Remove(record);
-            carRentalEntitiesObj.SaveChanges();
-            RefreshGridView();
-            MessageBox.Show("Record Deleted Successfully");
+            DialogResult dr = MessageBox.Show("Are You Sure, You Want to Delete This Record?",
+                "Delete", MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Warning);
+            if(dr==DialogResult.Yes)
+            {
+                var record = carRentalEntitiesObj.CarRentalDetails.FirstOrDefault(x => x.id == recordID);
+                carRentalEntitiesObj.CarRentalDetails.Remove(record);
+                carRentalEntitiesObj.SaveChanges();
+                RefreshGridView();
+                MessageBox.Show("Record Deleted Successfully");
+            }    
+           
 
         }
 

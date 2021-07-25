@@ -75,7 +75,7 @@ namespace CarRental
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-           // loginObj.Close();
+           loginObj.Visible=true;
         }
 
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)

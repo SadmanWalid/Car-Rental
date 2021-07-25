@@ -99,11 +99,18 @@ namespace CarRental
             }
             else
             {
+                DialogResult dr = MessageBox.Show("Are You Sure,You Want To Delete The Vehicle?",
+                    "Delete",MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Warning);
                 //to do change table design in MSSQL
-                carRentalEntitiesObj.TypesOfCars.Remove(Car);
-                carRentalEntitiesObj.SaveChanges();
-                RefreshGridView();
-                MessageBox.Show("Car Deleted Successfully");
+                if(dr==DialogResult.Yes)
+                {
+                    carRentalEntitiesObj.TypesOfCars.Remove(Car);
+                    carRentalEntitiesObj.SaveChanges();
+                    RefreshGridView();
+                    MessageBox.Show("Car Deleted Successfully");
+                }
+             
 
             }
 

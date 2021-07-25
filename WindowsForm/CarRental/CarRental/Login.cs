@@ -51,9 +51,9 @@ namespace CarRental
 
             var user = carRentalEntitiesObj.Users.FirstOrDefault(x => x.userName == userName && x.password == hashedPassword);
 
-            if(user!=null)
+            if (user != null)
             {
-                if(!cbRememberPassword.Checked)
+                if (!cbRememberPassword.Checked)
                 {
                     tbUserName.Text = string.Empty;
                     tbPassword.Text = string.Empty;
@@ -64,6 +64,8 @@ namespace CarRental
                 var mainWindow = new MainWindow(role, this);
                 mainWindow.Show();
             }
+            else
+                MessageBox.Show("Please, Enter correct Credentials!!!");
 
 
         }
