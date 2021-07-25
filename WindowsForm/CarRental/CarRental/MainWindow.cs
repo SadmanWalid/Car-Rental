@@ -13,9 +13,12 @@ namespace CarRental
     public partial class MainWindow : Form
     {
         private readonly Login loginObj;
-       
-        public MainWindow(Login objFromLoginForm)
+        public string _role;
+
+
+        public MainWindow(string role, Login objFromLoginForm = null)
         {
+            _role = role;
             loginObj = objFromLoginForm;
             InitializeComponent();
         }
@@ -72,7 +75,39 @@ namespace CarRental
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            loginObj.Close();
+           // loginObj.Close();
+        }
+
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
+
+            var isOpen = openForms.Any(x => x.Name == "ManageUser");
+
+            if(!isOpen)
+            {
+                var manageUser = new ManageUser()
+                {
+                    MdiParent = this
+                };
+                manageUser.Show();
+            }
+
+
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            if(_role!="admin")
+            {
+                manageUsersToolStripMenuItem.Visible = false;
+            }
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loginObj.Visible = true;
+            this.Close();
         }
     }
 }

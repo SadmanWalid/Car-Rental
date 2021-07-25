@@ -36,6 +36,7 @@ namespace CarRental
             this.lbUserName = new System.Windows.Forms.Label();
             this.btClose = new System.Windows.Forms.Button();
             this.btLogin = new System.Windows.Forms.Button();
+            this.cbRememberPassword = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,23 +46,23 @@ namespace CarRental
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.tbPassword, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tbUserName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbPassword, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbUserName, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(151, 47);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tbUserName, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(160, 84);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 178);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 116);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(97, 91);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Location = new System.Drawing.Point(97, 60);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(239, 26);
@@ -70,7 +71,7 @@ namespace CarRental
             // tbUserName
             // 
             this.tbUserName.Location = new System.Drawing.Point(97, 2);
-            this.tbUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUserName.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(239, 26);
             this.tbUserName.TabIndex = 1;
@@ -78,7 +79,7 @@ namespace CarRental
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(3, 89);
+            this.lbPassword.Location = new System.Drawing.Point(3, 58);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(78, 20);
             this.lbPassword.TabIndex = 2;
@@ -97,7 +98,7 @@ namespace CarRental
             // 
             this.btClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClose.Location = new System.Drawing.Point(353, 257);
+            this.btClose.Location = new System.Drawing.Point(350, 277);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(137, 38);
             this.btClose.TabIndex = 14;
@@ -109,7 +110,7 @@ namespace CarRental
             // 
             this.btLogin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.Location = new System.Drawing.Point(204, 257);
+            this.btLogin.Location = new System.Drawing.Point(204, 277);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(121, 38);
             this.btLogin.TabIndex = 15;
@@ -117,21 +118,33 @@ namespace CarRental
             this.btLogin.UseVisualStyleBackColor = false;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
+            // cbRememberPassword
+            // 
+            this.cbRememberPassword.AutoSize = true;
+            this.cbRememberPassword.Location = new System.Drawing.Point(245, 217);
+            this.cbRememberPassword.Name = "cbRememberPassword";
+            this.cbRememberPassword.Size = new System.Drawing.Size(196, 24);
+            this.cbRememberPassword.TabIndex = 16;
+            this.cbRememberPassword.Text = "Remember Password?";
+            this.cbRememberPassword.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 367);
+            this.Controls.Add(this.cbRememberPassword);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Car Rental System";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,5 +157,6 @@ namespace CarRental
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.CheckBox cbRememberPassword;
     }
 }
