@@ -42,23 +42,23 @@ namespace CarRental
             // 
             // lbTitle
             // 
+            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("AR JULIAN", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(293, 9);
-            this.lbTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTitle.Location = new System.Drawing.Point(217, 9);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(481, 68);
+            this.lbTitle.Size = new System.Drawing.Size(411, 58);
             this.lbTitle.TabIndex = 20;
             this.lbTitle.Text = "Manage Records";
             // 
             // BtDeleteRecord
             // 
+            this.BtDeleteRecord.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtDeleteRecord.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtDeleteRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtDeleteRecord.Location = new System.Drawing.Point(536, 513);
-            this.BtDeleteRecord.Margin = new System.Windows.Forms.Padding(4);
+            this.BtDeleteRecord.Location = new System.Drawing.Point(439, 427);
             this.BtDeleteRecord.Name = "BtDeleteRecord";
-            this.BtDeleteRecord.Size = new System.Drawing.Size(159, 82);
+            this.BtDeleteRecord.Size = new System.Drawing.Size(130, 68);
             this.BtDeleteRecord.TabIndex = 19;
             this.BtDeleteRecord.Text = "Delete Record";
             this.BtDeleteRecord.UseVisualStyleBackColor = false;
@@ -66,12 +66,12 @@ namespace CarRental
             // 
             // btEditRecord
             // 
+            this.btEditRecord.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEditRecord.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btEditRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEditRecord.Location = new System.Drawing.Point(315, 512);
-            this.btEditRecord.Margin = new System.Windows.Forms.Padding(4);
+            this.btEditRecord.Location = new System.Drawing.Point(258, 427);
             this.btEditRecord.Name = "btEditRecord";
-            this.btEditRecord.Size = new System.Drawing.Size(159, 83);
+            this.btEditRecord.Size = new System.Drawing.Size(130, 69);
             this.btEditRecord.TabIndex = 18;
             this.btEditRecord.Text = "Edit Record";
             this.btEditRecord.UseVisualStyleBackColor = false;
@@ -79,12 +79,12 @@ namespace CarRental
             // 
             // btAddNewRecord
             // 
+            this.btAddNewRecord.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAddNewRecord.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btAddNewRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddNewRecord.Location = new System.Drawing.Point(88, 511);
-            this.btAddNewRecord.Margin = new System.Windows.Forms.Padding(4);
+            this.btAddNewRecord.Location = new System.Drawing.Point(72, 426);
             this.btAddNewRecord.Name = "btAddNewRecord";
-            this.btAddNewRecord.Size = new System.Drawing.Size(148, 83);
+            this.btAddNewRecord.Size = new System.Drawing.Size(121, 69);
             this.btAddNewRecord.TabIndex = 17;
             this.btAddNewRecord.Text = "Add New Record";
             this.btAddNewRecord.UseVisualStyleBackColor = false;
@@ -92,6 +92,8 @@ namespace CarRental
             // 
             // gvManageRentalRecords
             // 
+            this.gvManageRentalRecords.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gvManageRentalRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,23 +111,22 @@ namespace CarRental
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvManageRentalRecords.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gvManageRentalRecords.Location = new System.Drawing.Point(61, 102);
-            this.gvManageRentalRecords.Margin = new System.Windows.Forms.Padding(4);
+            this.gvManageRentalRecords.Location = new System.Drawing.Point(50, 85);
             this.gvManageRentalRecords.Name = "gvManageRentalRecords";
             this.gvManageRentalRecords.RowHeadersVisible = false;
             this.gvManageRentalRecords.RowHeadersWidth = 62;
             this.gvManageRentalRecords.RowTemplate.Height = 28;
-            this.gvManageRentalRecords.Size = new System.Drawing.Size(919, 393);
+            this.gvManageRentalRecords.Size = new System.Drawing.Size(752, 327);
             this.gvManageRentalRecords.TabIndex = 16;
             // 
             // btClose
             // 
+            this.btClose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClose.Location = new System.Drawing.Point(768, 511);
-            this.btClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btClose.Location = new System.Drawing.Point(628, 426);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(159, 82);
+            this.btClose.Size = new System.Drawing.Size(130, 68);
             this.btClose.TabIndex = 21;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = false;
@@ -133,15 +134,16 @@ namespace CarRental
             // 
             // ManageRentalRecords
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 617);
+            this.ClientSize = new System.Drawing.Size(887, 514);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.BtDeleteRecord);
             this.Controls.Add(this.btEditRecord);
             this.Controls.Add(this.btAddNewRecord);
             this.Controls.Add(this.gvManageRentalRecords);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManageRentalRecords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Rental Records";

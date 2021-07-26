@@ -13,21 +13,22 @@ namespace CarRental
     public partial class MainWindow : Form
     {
         private readonly Login loginObj;
-       
-        public MainWindow(Login objFromLoginForm)
+        public User _user;
+
+
+        public MainWindow(User user, Login objFromLoginForm = null)
         {
+            _user = user;
             loginObj = objFromLoginForm;
             InitializeComponent();
         }
 
         private void AddRentalRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var openForms = Application.OpenForms.Cast<Form>().ToList();
-
-            var Isopen = openForms.Any<Form>(x => x.Name == "AddEditRentalInfo");
+            var isOpen = Utilities.IsFormOpen("AddEditRentalInfo");
 
 
-            if (!Isopen)
+            if (!isOpen)
             {
                 var addRentalInfo = new AddEditRentalInfo();
                 addRentalInfo.MdiParent = this;
@@ -39,12 +40,10 @@ namespace CarRental
 
         private void manageVehicleListingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var openForms = Application.OpenForms.Cast<Form>().ToList();
-
-            var Isopen = openForms.Any<Form>(x => x.Name == "ManageCars");
+            var isOpen = Utilities.IsFormOpen("ManageCars");
 
 
-            if (!Isopen)
+            if (!isOpen)
             {
                 var manageCar = new ManageCars();
                 manageCar.MdiParent = this;
@@ -55,12 +54,10 @@ namespace CarRental
 
         private void viewArchiveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var openForms = Application.OpenForms.Cast<Form>().ToList();
-
-            var Isopen = openForms.Any<Form>(x => x.Name == "ManageRentalRecords");
+            var isOpen = Utilities.IsFormOpen("ManageRentalRecords");
 
 
-            if (!Isopen)
+            if (!isOpen)
             {
                 var viewArchive = new ManageRentalRecords();
                 viewArchive.MdiParent = this;
@@ -72,7 +69,40 @@ namespace CarRental
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            loginObj.Close();
+           loginObj.Visible=true;
+        }
+
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            var isOpen = Utilities.IsFormOpen("ManageUsers");
+
+            if (!isOpen)
+            {
+                var manageUser = new ManageUsers()
+                {
+                    MdiParent = this
+                };
+                manageUser.Show();
+            }
+
+
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            var userRole = _user.UserRoles.FirstOrDefault().Role.shortName.ToString();
+            if (userRole != "admin")
+            {
+               
+                manageUsersToolStripMenuItem.Visible = false;
+            }
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loginObj.Visible = true;
+            this.Close();
         }
     }
 }
