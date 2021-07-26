@@ -90,6 +90,12 @@
     <Compile Include="AddEditCar.Designer.cs">
       <DependentUpon>AddEditCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarRentaldb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,11 +144,11 @@
     <Compile Include="ManageRentalRecords.Designer.cs">
       <DependentUpon>ManageRentalRecords.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageUser.cs">
+    <Compile Include="ManageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageUser.Designer.cs">
-      <DependentUpon>ManageUser.cs</DependentUpon>
+    <Compile Include="ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,11 +164,15 @@
     <Compile Include="UserRole.cs">
       <DependentUpon>CarRentaldb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="AddEditCar.resx">
       <DependentUpon>AddEditCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEditRentalInfo.resx">
       <DependentUpon>AddEditRentalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -175,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageRentalRecords.resx">
       <DependentUpon>ManageRentalRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

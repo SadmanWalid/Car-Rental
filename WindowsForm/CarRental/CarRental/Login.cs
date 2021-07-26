@@ -30,43 +30,39 @@ namespace CarRental
             var userName = tbUserName.Text.Trim();
             var password = tbPassword.Text;
 
-            ///encryption
-            //Create a sha256 object
-            SHA256 sha = SHA256.Create();
-            //convert password into hash values and store in a  bytes array
-            byte[] data = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
 
-            // create a string builder to collect the hashed data in byte array to create string from them
-
-            StringBuilder sBuilder = new StringBuilder();
-
-            for (int i = 0; i < data.Length; i++)
-            {
-                sBuilder.Append(data[i].ToString("x2")); 
-
-            }
-
-                var hashedPassword = sBuilder.ToString();
+            var hashedPassword = Utilities.HashedPassword(password);
 
 
-            var user = carRentalEntitiesObj.Users.FirstOrDefault(x => x.userName == userName && x.password == hashedPassword);
+            var user = carRentalEntitiesObj.Users.FirstOrDefault(x => x.userName == userName && x.password == hashedPassword );
 
             if (user != null)
             {
-                if (!cbRememberPassword.Checked)
+                var isActive = user.isActive;
+                if(isActive==true)
                 {
-                    tbUserName.Text = string.Empty;
-                    tbPassword.Text = string.Empty;
-                }
+                    if (!cbRememberPassword.Checked)
+                    {
+                        tbUserName.Text = string.Empty;
+                        tbPassword.Text = string.Empty;
+                    }
 
-                this.Hide();
-                var role = user.UserRoles.FirstOrDefault().Role.shortName;
-                var mainWindow = new MainWindow(role, this);
-                mainWindow.Show();
+
+                    this.Hide();
+
+                    var mainWindow = new MainWindow(user, this);
+                    mainWindow.Show();
+                }
+                else
+                  MessageBox.Show("Your Acount is not Active!!!");
+
+
             }
             else
-                MessageBox.Show("Please, Enter correct Credentials!!!");
+            {
+                 MessageBox.Show("Please, Enter correct Credentials!!!");
 
+            }
 
         }
     }

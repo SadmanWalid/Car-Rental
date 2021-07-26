@@ -42,6 +42,8 @@ namespace CarRental
             // 
             // gvManageCars
             // 
+            this.gvManageCars.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gvManageCars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,23 +61,23 @@ namespace CarRental
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvManageCars.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gvManageCars.Location = new System.Drawing.Point(31, 101);
-            this.gvManageCars.Margin = new System.Windows.Forms.Padding(4);
+            this.gvManageCars.Location = new System.Drawing.Point(25, 84);
             this.gvManageCars.Name = "gvManageCars";
             this.gvManageCars.RowHeadersVisible = false;
             this.gvManageCars.RowHeadersWidth = 62;
             this.gvManageCars.RowTemplate.Height = 28;
-            this.gvManageCars.Size = new System.Drawing.Size(919, 373);
+            this.gvManageCars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gvManageCars.Size = new System.Drawing.Size(752, 311);
             this.gvManageCars.TabIndex = 0;
             // 
             // btAddNewCar
             // 
+            this.btAddNewCar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAddNewCar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btAddNewCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddNewCar.Location = new System.Drawing.Point(53, 499);
-            this.btAddNewCar.Margin = new System.Windows.Forms.Padding(4);
+            this.btAddNewCar.Location = new System.Drawing.Point(43, 416);
             this.btAddNewCar.Name = "btAddNewCar";
-            this.btAddNewCar.Size = new System.Drawing.Size(148, 83);
+            this.btAddNewCar.Size = new System.Drawing.Size(121, 69);
             this.btAddNewCar.TabIndex = 12;
             this.btAddNewCar.Text = "Add New Car";
             this.btAddNewCar.UseVisualStyleBackColor = false;
@@ -83,12 +85,12 @@ namespace CarRental
             // 
             // btEditCar
             // 
+            this.btEditCar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEditCar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btEditCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEditCar.Location = new System.Drawing.Point(267, 499);
-            this.btEditCar.Margin = new System.Windows.Forms.Padding(4);
+            this.btEditCar.Location = new System.Drawing.Point(218, 416);
             this.btEditCar.Name = "btEditCar";
-            this.btEditCar.Size = new System.Drawing.Size(159, 83);
+            this.btEditCar.Size = new System.Drawing.Size(130, 69);
             this.btEditCar.TabIndex = 13;
             this.btEditCar.Text = "Edit Car";
             this.btEditCar.UseVisualStyleBackColor = false;
@@ -96,12 +98,12 @@ namespace CarRental
             // 
             // BtDeleteCar
             // 
+            this.BtDeleteCar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtDeleteCar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtDeleteCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtDeleteCar.Location = new System.Drawing.Point(529, 500);
-            this.BtDeleteCar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtDeleteCar.Location = new System.Drawing.Point(433, 417);
             this.BtDeleteCar.Name = "BtDeleteCar";
-            this.BtDeleteCar.Size = new System.Drawing.Size(159, 82);
+            this.BtDeleteCar.Size = new System.Drawing.Size(130, 68);
             this.BtDeleteCar.TabIndex = 14;
             this.BtDeleteCar.Text = "Delete Car";
             this.BtDeleteCar.UseVisualStyleBackColor = false;
@@ -109,23 +111,23 @@ namespace CarRental
             // 
             // lbTitle
             // 
+            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("AR JULIAN", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(294, 9);
-            this.lbTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTitle.Location = new System.Drawing.Point(208, 9);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(385, 68);
+            this.lbTitle.Size = new System.Drawing.Size(330, 58);
             this.lbTitle.TabIndex = 15;
             this.lbTitle.Text = "Manage Cars";
             // 
             // btClose
             // 
+            this.btClose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClose.Location = new System.Drawing.Point(761, 499);
-            this.btClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btClose.Location = new System.Drawing.Point(623, 416);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(159, 82);
+            this.btClose.Size = new System.Drawing.Size(130, 68);
             this.btClose.TabIndex = 22;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = false;
@@ -133,16 +135,15 @@ namespace CarRental
             // 
             // ManageCars
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 684);
+            this.ClientSize = new System.Drawing.Size(807, 570);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.BtDeleteCar);
             this.Controls.Add(this.btEditCar);
             this.Controls.Add(this.btAddNewCar);
             this.Controls.Add(this.gvManageCars);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageCars";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Cars";

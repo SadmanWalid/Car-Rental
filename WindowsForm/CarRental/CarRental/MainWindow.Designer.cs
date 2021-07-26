@@ -42,7 +42,6 @@ namespace CarRental
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageVehicleListingToolStripMenuItem,
@@ -75,14 +74,14 @@ namespace CarRental
             // AddRentalRecordToolStripMenuItem
             // 
             this.AddRentalRecordToolStripMenuItem.Name = "AddRentalRecordToolStripMenuItem";
-            this.AddRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.AddRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.AddRentalRecordToolStripMenuItem.Text = "Add Rental Record";
             this.AddRentalRecordToolStripMenuItem.Click += new System.EventHandler(this.AddRentalRecordToolStripMenuItem_Click);
             // 
             // viewArchiveToolStripMenuItem
             // 
             this.viewArchiveToolStripMenuItem.Name = "viewArchiveToolStripMenuItem";
-            this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.viewArchiveToolStripMenuItem.Text = "View Archive";
             this.viewArchiveToolStripMenuItem.Click += new System.EventHandler(this.viewArchiveToolStripMenuItem_Click);
             // 
@@ -104,7 +103,7 @@ namespace CarRental
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(176, 34);
             this.logOutToolStripMenuItem.Text = "Log out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -119,7 +118,7 @@ namespace CarRental
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainWindow";
+            this.Text = "Main Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.menuStrip1.ResumeLayout(false);

@@ -30,16 +30,16 @@ namespace CarRental
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tbYear = new System.Windows.Forms.TextBox();
-            this.tbLicenseNumber = new System.Windows.Forms.TextBox();
-            this.tbVIN = new System.Windows.Forms.TextBox();
-            this.tbModel = new System.Windows.Forms.TextBox();
             this.lbBrand = new System.Windows.Forms.Label();
-            this.lbModel = new System.Windows.Forms.Label();
             this.lbVIN = new System.Windows.Forms.Label();
+            this.tbBrand = new System.Windows.Forms.TextBox();
+            this.lbModel = new System.Windows.Forms.Label();
+            this.tbModel = new System.Windows.Forms.TextBox();
+            this.tbVIN = new System.Windows.Forms.TextBox();
+            this.tbLicenseNumber = new System.Windows.Forms.TextBox();
+            this.tbYear = new System.Windows.Forms.TextBox();
             this.lbLincenseNumber = new System.Windows.Forms.Label();
             this.lbYear = new System.Windows.Forms.Label();
-            this.tbBrand = new System.Windows.Forms.TextBox();
             this.btCancel = new System.Windows.Forms.Button();
             this.btSaveChanges = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
@@ -50,9 +50,8 @@ namespace CarRental
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lbBrand, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbVIN, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tbBrand, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbModel, 0, 1);
@@ -62,8 +61,8 @@ namespace CarRental
             this.tableLayoutPanel1.Controls.Add(this.tbYear, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.lbLincenseNumber, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.lbYear, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(121, 87);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbBrand, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(100, 72);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -71,107 +70,107 @@ namespace CarRental
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(701, 299);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(574, 249);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // tbYear
-            // 
-            this.tbYear.Location = new System.Drawing.Point(230, 240);
-            this.tbYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbYear.Name = "tbYear";
-            this.tbYear.Size = new System.Drawing.Size(451, 29);
-            this.tbYear.TabIndex = 9;
-            // 
-            // tbLicenseNumber
-            // 
-            this.tbLicenseNumber.Location = new System.Drawing.Point(230, 181);
-            this.tbLicenseNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbLicenseNumber.Name = "tbLicenseNumber";
-            this.tbLicenseNumber.Size = new System.Drawing.Size(451, 29);
-            this.tbLicenseNumber.TabIndex = 8;
-            // 
-            // tbVIN
-            // 
-            this.tbVIN.Location = new System.Drawing.Point(230, 122);
-            this.tbVIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbVIN.Name = "tbVIN";
-            this.tbVIN.Size = new System.Drawing.Size(451, 29);
-            this.tbVIN.TabIndex = 7;
-            // 
-            // tbModel
-            // 
-            this.tbModel.Location = new System.Drawing.Point(230, 63);
-            this.tbModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbModel.Name = "tbModel";
-            this.tbModel.Size = new System.Drawing.Size(451, 29);
-            this.tbModel.TabIndex = 6;
             // 
             // lbBrand
             // 
+            this.lbBrand.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbBrand.AutoSize = true;
-            this.lbBrand.Location = new System.Drawing.Point(4, 0);
-            this.lbBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbBrand.Location = new System.Drawing.Point(3, 14);
             this.lbBrand.Name = "lbBrand";
-            this.lbBrand.Size = new System.Drawing.Size(64, 25);
+            this.lbBrand.Size = new System.Drawing.Size(52, 20);
             this.lbBrand.TabIndex = 0;
             this.lbBrand.Text = "Brand";
             // 
-            // lbModel
-            // 
-            this.lbModel.AutoSize = true;
-            this.lbModel.Location = new System.Drawing.Point(4, 59);
-            this.lbModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbModel.Name = "lbModel";
-            this.lbModel.Size = new System.Drawing.Size(66, 25);
-            this.lbModel.TabIndex = 1;
-            this.lbModel.Text = "Model";
-            // 
             // lbVIN
             // 
+            this.lbVIN.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbVIN.AutoSize = true;
-            this.lbVIN.Location = new System.Drawing.Point(4, 118);
-            this.lbVIN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbVIN.Location = new System.Drawing.Point(3, 112);
             this.lbVIN.Name = "lbVIN";
-            this.lbVIN.Size = new System.Drawing.Size(218, 25);
+            this.lbVIN.Size = new System.Drawing.Size(177, 20);
             this.lbVIN.TabIndex = 2;
             this.lbVIN.Text = "Vehicle Identity Number";
             // 
+            // tbBrand
+            // 
+            this.tbBrand.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbBrand.Location = new System.Drawing.Point(201, 11);
+            this.tbBrand.Name = "tbBrand";
+            this.tbBrand.Size = new System.Drawing.Size(370, 26);
+            this.tbBrand.TabIndex = 5;
+            // 
+            // lbModel
+            // 
+            this.lbModel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbModel.AutoSize = true;
+            this.lbModel.Location = new System.Drawing.Point(3, 63);
+            this.lbModel.Name = "lbModel";
+            this.lbModel.Size = new System.Drawing.Size(52, 20);
+            this.lbModel.TabIndex = 1;
+            this.lbModel.Text = "Model";
+            // 
+            // tbModel
+            // 
+            this.tbModel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbModel.Location = new System.Drawing.Point(201, 60);
+            this.tbModel.Name = "tbModel";
+            this.tbModel.Size = new System.Drawing.Size(370, 26);
+            this.tbModel.TabIndex = 6;
+            // 
+            // tbVIN
+            // 
+            this.tbVIN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbVIN.Location = new System.Drawing.Point(201, 109);
+            this.tbVIN.Name = "tbVIN";
+            this.tbVIN.Size = new System.Drawing.Size(370, 26);
+            this.tbVIN.TabIndex = 7;
+            // 
+            // tbLicenseNumber
+            // 
+            this.tbLicenseNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbLicenseNumber.Location = new System.Drawing.Point(201, 158);
+            this.tbLicenseNumber.Name = "tbLicenseNumber";
+            this.tbLicenseNumber.Size = new System.Drawing.Size(370, 26);
+            this.tbLicenseNumber.TabIndex = 8;
+            // 
+            // tbYear
+            // 
+            this.tbYear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbYear.Location = new System.Drawing.Point(201, 209);
+            this.tbYear.Name = "tbYear";
+            this.tbYear.Size = new System.Drawing.Size(370, 26);
+            this.tbYear.TabIndex = 9;
+            // 
             // lbLincenseNumber
             // 
+            this.lbLincenseNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbLincenseNumber.AutoSize = true;
-            this.lbLincenseNumber.Location = new System.Drawing.Point(4, 177);
-            this.lbLincenseNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbLincenseNumber.Location = new System.Drawing.Point(3, 161);
             this.lbLincenseNumber.Name = "lbLincenseNumber";
-            this.lbLincenseNumber.Size = new System.Drawing.Size(154, 25);
+            this.lbLincenseNumber.Size = new System.Drawing.Size(124, 20);
             this.lbLincenseNumber.TabIndex = 4;
             this.lbLincenseNumber.Text = "License Number";
             // 
             // lbYear
             // 
+            this.lbYear.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbYear.AutoSize = true;
-            this.lbYear.Location = new System.Drawing.Point(4, 236);
-            this.lbYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbYear.Location = new System.Drawing.Point(3, 212);
             this.lbYear.Name = "lbYear";
-            this.lbYear.Size = new System.Drawing.Size(53, 25);
+            this.lbYear.Size = new System.Drawing.Size(43, 20);
             this.lbYear.TabIndex = 3;
             this.lbYear.Text = "Year";
             // 
-            // tbBrand
-            // 
-            this.tbBrand.Location = new System.Drawing.Point(230, 4);
-            this.tbBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbBrand.Name = "tbBrand";
-            this.tbBrand.Size = new System.Drawing.Size(451, 29);
-            this.tbBrand.TabIndex = 5;
-            // 
             // btCancel
             // 
+            this.btCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancel.Location = new System.Drawing.Point(654, 420);
-            this.btCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btCancel.Location = new System.Drawing.Point(430, 350);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(148, 83);
+            this.btCancel.Size = new System.Drawing.Size(121, 69);
             this.btCancel.TabIndex = 13;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = false;
@@ -179,12 +178,12 @@ namespace CarRental
             // 
             // btSaveChanges
             // 
+            this.btSaveChanges.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btSaveChanges.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btSaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSaveChanges.Location = new System.Drawing.Point(142, 420);
-            this.btSaveChanges.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSaveChanges.Location = new System.Drawing.Point(250, 350);
             this.btSaveChanges.Name = "btSaveChanges";
-            this.btSaveChanges.Size = new System.Drawing.Size(148, 83);
+            this.btSaveChanges.Size = new System.Drawing.Size(121, 69);
             this.btSaveChanges.TabIndex = 14;
             this.btSaveChanges.Text = "Save Changes";
             this.btSaveChanges.UseVisualStyleBackColor = false;
@@ -192,31 +191,27 @@ namespace CarRental
             // 
             // lbTitle
             // 
-            this.lbTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("AR JULIAN", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(273, -2);
-            this.lbTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTitle.Location = new System.Drawing.Point(223, -2);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(430, 68);
+            this.lbTitle.Size = new System.Drawing.Size(368, 58);
             this.lbTitle.TabIndex = 15;
             this.lbTitle.Text = "Add Edit Cars";
             // 
             // AddEditCar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 540);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.btSaveChanges);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddEditCar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddEditCar";
+            this.Text = "Add/Edit Car";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddEditCar_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

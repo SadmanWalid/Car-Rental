@@ -52,23 +52,35 @@ namespace CarRental
 
         private void btAddNewCar_Click(object sender, EventArgs e)
         {
-            var addEditCar = new AddEditCar(this);
-            addEditCar.MdiParent = this.MdiParent;
-            addEditCar.Show();
+            var isOpen = Utilities.IsFormOpen("AddEditCar");
+
+            if(!isOpen)
+            {
+                var addEditCar = new AddEditCar(this);
+                addEditCar.MdiParent = this.MdiParent;
+                addEditCar.Show();
+            }
+            
             
         }
 
         private void btEditCar_Click(object sender, EventArgs e)
         {
+            var isOpen = Utilities.IsFormOpen("AddEditCar");
+
+            if (!isOpen)
+            {
+                var selectedRowIndex = gvManageCars.SelectedCells[0].RowIndex;
+                var ID = (int)gvManageCars.Rows[selectedRowIndex].Cells["carID"].Value;
+
+                //var editCar = carRentalEntitiesObj.TypesOfCars.FirstOrDefault(x => x.id == ID );
+                var addEditCar = new AddEditCar(ID, this);
+                addEditCar.MdiParent = this.MdiParent;
+                addEditCar.Show();
+
+            }
 
             
-            var selectedRowIndex = gvManageCars.SelectedCells[0].RowIndex;
-            var ID = (int)gvManageCars.Rows[selectedRowIndex].Cells["carID"].Value;
-            
-            //var editCar = carRentalEntitiesObj.TypesOfCars.FirstOrDefault(x => x.id == ID );
-            var addEditCar = new AddEditCar(ID,this);
-            addEditCar.MdiParent = this.MdiParent;
-            addEditCar.Show();
            
 
         }

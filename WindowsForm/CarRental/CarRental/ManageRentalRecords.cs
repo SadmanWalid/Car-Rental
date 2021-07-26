@@ -50,30 +50,46 @@ namespace CarRental
 
         private void btAddNewRecord_Click(object sender, EventArgs e)
         {
-            var record = new AddEditRentalInfo(this)
-            {
-                MdiParent = this.MdiParent
-            };
+            var isOpen = Utilities.IsFormOpen("AddEditRentalInfo");
 
-            record.Show();
+            if(!isOpen)
+            {
+                var record = new AddEditRentalInfo(this)
+                {
+                    MdiParent = this.MdiParent
+                };
+
+                record.Show();
+            }
+
+
+           
 
                 
         }
 
         private void btEditRecord_Click(object sender, EventArgs e)
         {
-            var rowIndex = gvManageRentalRecords.SelectedCells[0].RowIndex;
-            var editRecordID = (int)gvManageRentalRecords.Rows[rowIndex].Cells["ID"].Value;
-            var record = new AddEditRentalInfo(editRecordID,this)
-            { 
-                MdiParent =this.MdiParent,
-            };
+            var isOpen = Utilities.IsFormOpen("AddEditRentalInfo");
 
-            record.Show();
+            if (!isOpen)
+            {
+                var rowIndex = gvManageRentalRecords.SelectedCells[0].RowIndex;
+                var editRecordID = (int)gvManageRentalRecords.Rows[rowIndex].Cells["ID"].Value;
+                var record = new AddEditRentalInfo(editRecordID, this)
+                {
+                    MdiParent = this.MdiParent,
+                };
+
+                record.Show();
+
+            }
+          
         }
 
         private void BtDeleteRecord_Click(object sender, EventArgs e)
         {
+            
             var rowIndex = gvManageRentalRecords.SelectedCells[0].RowIndex;
             var recordID = (int)gvManageRentalRecords.Rows[rowIndex].Cells["ID"].Value;
 
