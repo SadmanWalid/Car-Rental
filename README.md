@@ -1,1 +1,1 @@
-Repo for projects form Udemy Courses.
+A project developed using WindowsForms,LINQ, and ADO.NET.
